@@ -1,18 +1,9 @@
-plugins {
-    id "com.android.application"
-    id "kotlin-android"
-    id "dev.flutter.flutter-gradle-plugin"
-}
-android {
-    namespace = "com.aylegend.client"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
-    defaultConfig {
-        applicationId = "com.aylegend.client"
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = 1
-        versionName = "1.0.0"
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
     }
 }
-flutter { source = "../.." }
+rootProject.buildDir = "../build"
+subprojects { project.buildDir = "${rootProject.buildDir}/${project.name}" }
+tasks.register("clean", Delete) { delete rootProject.buildDir }

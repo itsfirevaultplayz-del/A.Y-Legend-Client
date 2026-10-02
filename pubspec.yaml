@@ -1,20 +1,22 @@
 name: ay_legend_client
-description: A.Y Legend Client - a safe companion/UI app for Minecraft Bedrock.
-publish_to: 'none'
+description: A.Y Legend Client - safe Minecraft Bedrock companion app.
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.5.0 <4.0.0'
+  sdk: ">=3.4.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  shared_preferences: ^2.3.2
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
